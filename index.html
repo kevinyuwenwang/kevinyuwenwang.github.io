@@ -5,24 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kevin Y. Wang</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px; background: #111; color: #ccc; line-height: 1.75; font-size: 17px; }
+    body { font-family: system-ui, sans-serif; max-width: 700px; margin: 60px auto; padding: 0 24px; background: #111; color: #ccc; line-height: 1.8; font-size: 17px; }
     h1, h2 { color: #fff; font-weight: 400; }
-    h1 { font-size: 2.4em; letter-spacing: -0.02em; margin: 0 0 8px; }
-    .tagline { font-style: italic; color: #666; font-size: .95em; margin-bottom: 50px; }
-    h2 { font-size: 1.3em; margin-top: 42px; cursor: pointer; display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding-bottom: 5px; user-select: none; }
+    h1 { font-size: 2.4em; letter-spacing: -0.02em; margin: 0 0 6px; }
+    .tagline { font-style: italic; color: #555; font-size: .9em; margin-bottom: 55px; }
+    h2 { font-size: 1.25em; margin-top: 44px; cursor: pointer; display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding-bottom: 5px; user-select: none; }
     h2::after { content: '[−]'; color: #4a9eff; font-size: .75em; font-family: monospace; }
     h2.collapsed::after { content: '[+]'; }
     .section-content { overflow: hidden; transition: max-height .3s ease; max-height: 5000px; border-left: 1px solid #222; padding-left: 20px; margin-left: 5px; }
     .section-content.collapsed { max-height: 0; }
-    p { margin: 0 0 16px; }
+    p { margin: 0 0 18px; }
     a { color: #4a9eff; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    ul { margin: 0 0 10px; padding-left: 20px; list-style: none; }
-    li { margin-bottom: 7px; }
-    .discipline { margin-bottom: 28px; }
-    .discipline b { color: #eee; font-weight: 600; }
+    .discipline { margin-bottom: 22px; }
+    .discipline b { color: #eee; }
     .discipline span { color: #999; }
-    .discipline em { color: #bbb; }
     footer { margin-top: 55px; padding-top: 20px; border-top: 1px solid #222; color: #555; font-size: .88em; line-height: 2.1; }
   </style>
 </head>
@@ -33,55 +30,52 @@
 
   <h2 onclick="toggleSection(this)">About</h2>
   <div class="section-content">
-    <p>I build business and systems in New York. The through-line across everything I work on is finding the small, correct mechanism that moves a whole thing—whether it's a trading model, a control panel, or a team of two. I'm not the loudest in the room and I don't need to be. The work either holds or it doesn't, and I'd rather know which one it is before I show anyone.</p>
-    <p>This page is the short version. The longer one takes a while.</p>
+    <p>I build business and systems in New York.</p>
   </div>
 
   <h2 onclick="toggleSection(this)">The Story</h2>
   <div class="section-content">
 
-    <p>Shanghai, middle school. I was the kid in the principal's office most Thursdays. Half the time for disruption. The other half for whatever side hustle I was running—by 13 I was selling jailbroken iPhone apps to classmates and making more than most people my age earned in a year. At 15 my parents decided I needed a different zip code. Denver suburbs. A small academy where nobody knew my name and I didn't know anyone's.</p>
+    <p>Growing up in Shanghai, I was the kid in the principal's office most weeks, either for disrupting class or for the side hustles. By thirteen I was selling jailbroken iPhone apps to classmates. At fifteen my parents sent me to a small academy in the Denver suburbs for a change of scenery.</p>
 
-    <p>First year was mostly silence. I'd learned English from textbooks, and the social architecture of a school where everyone'd been in the same youth group since third grade was a language I simply didn't speak. Junior year I decided I could fix the gap with effort alone. No talent, no head start—just hours. Basketball, soccer, running after school until my legs gave out. A steady diet of Jimmy John's. Lost 30 kilos in a year. And the thing that actually changed wasn't the weight. It was that I'd proven to myself a boring, unsexy thing: sustained effort compounds, no matter what you start from. That belief got me into the classroom. Student government treasurer. An interest in finance I couldn't quite name yet.</p>
+    <p>The first year I was lost. I had learned English from textbooks, and I did not know how to navigate a school where everyone had known each other since kindergarten. In junior year, I took up basketball and soccer while being overweight, ran for hours after school, and went on a diet. Within one year, I lost over fifty pounds. The discipline carried into the classroom, and I developed an interest in finance and served as student treasurer.</p>
 
-    <p>College is where the interest got a name and a price tag. I opened a brokerage account at 18 and went through the phases: dividends first—Macy's stock, just to feel like I was getting paid for holding. Then Bitcoin, because I got impatient. Then a month of YouTube gurus and hours of staring at charts for patterns that weren't there. Then leverage. 10x, 20x. For a stretch it felt like the market was just handing me money. Then a Tuesday whipsaw wiped the whole account. I got the margin call mid-trip, on a packed itinerary. Didn't go to the hotel. Slept in the car. A few months later I tried options. 100x leverage. Gone faster than the rest.</p>
+    <p>College is where that interest got a name and a cost. I opened a brokerage account the moment I turned eighteen and started on the learning curve. Dividends were the first hook. I bought Macy's just to feel like I was getting paid for doing nothing. Then Bitcoin, because I was getting tired of waiting and wanted fast price movement. Then I followed YouTube trading gurus and spent hours hunting for chart patterns and day-trade setups. Then leverage, ten times, twenty times, and for a while it felt effortless. A Tuesday whipsaw wiped the account. I got the margin call mid-trip, skipped the hotel, slept in the car, trying to figure out what went wrong. A few months later I tried options. One hundred times leverage. Gone faster.</p>
 
-    <p>I don't think I was stupid. I think I was optimizing for the wrong variable—chasing the next win instead of understanding the mechanism underneath. The distinction only became visible to me on a junior-year afternoon when I picked up <em>Optimal Mean Reversion Trading</em>. The equations were a foreign language. But the structure was clear: this tier of math is the line between a trader and a gambler, and I'd been gambling. My foundation was too thin for what I was attempting. So I added a mathematics minor halfway through. My parents thought I'd lost my mind.</p>
+    <p>I was chasing the next win instead of understanding the mechanism. But things changed on an innocuous junior-year afternoon when I picked up <em>Optimal Mean Reversion Trading</em> by accident while browsing. The math was a foreign language, but I thought maybe this level of mathematics separates a trader from a gambler. I added a mathematics minor halfway through college. My parents thought I had lost my mind.</p>
 
-    <p>Graduate school made the career question unavoidable. Watching classmates grind for the same three finance internships, and knowing I'd always thought better alone than at a networking event, I started looking sideways. Then LLMs arrived and the whole map shifted. Months of late-night conversations with AI, hundreds of hours bouncing around what I actually wanted to build. And one thread kept coming back: skilled trades. The physical, mechanical, problem-solving work that has a feedback loop you can touch. Either the panel works or it doesn't. Nobody can deck-ify that.</p>
+    <p>Graduate school made the career question unavoidable. My classmates knew exactly why they were there and were competing for the same finance internships, while I was half in, half out, summoned here by my parents' order. AI had just started gaining traction, and after spending months chatting with a large language model, skilled trades emerged as the obvious fit for where I was heading.</p>
 
-    <p>Looking back, the thread connecting all of this is less a philosophy and more a habit: I need to open the box and see the wiring before I'll trust it. The math minor wasn't about becoming a mathematician. It was about not getting fooled again by a narrative. The trades interest isn't romanticism. It's that the work is honest in a way that most of what I'd been doing wasn't. And the people I've actually respected in the workplace weren't the ones with the cleanest quarterly story. They were the ones who could sit in a long, quiet, unproductive stretch without reaching for a distraction. Something still gets built in that silence. Something never gets built in the noise.</p>
   </div>
 
   <h2 onclick="toggleSection(this)">Disciplines</h2>
   <div class="section-content">
 
     <div class="discipline">
-      <b>Mathematics</b> <span>— the core. Everything else is a dialect of this.</span><br>
-      <em>Enderton, Elements of Set Theory · Herstein, Topics in Algebra · Rudin, Principles of Mathematical Analysis</em><br>
-      Vector calculus, linear algebra, ODEs, probability, the BU coursework underneath.
+      <b>Mathematics</b><br>
+      <span>Enderton, <em>Elements of Set Theory</em>. Herstein, <em>Topics in Algebra</em>. Rudin, <em>Principles of Mathematical Analysis</em>.</span>
     </div>
 
     <div class="discipline">
-      <b>Electrical Trades</b> <span>— the physical feedback loop.</span><br>
-      Apex Technical School, New York. Maxwell's equations, PLCs, networking. Not just the coursework—working in the field. The thing that either holds under load or it doesn't.
+      <b>Electrical</b><br>
+      <span>Trade school and the field.</span>
     </div>
 
     <div class="discipline">
-      <b>IT &amp; Systems</b> <span>— the infrastructure layer.</span><br>
-      Robert Love, <em>Linux Kernel Development</em>. Networking at the protocol level. A well-written kernel has no audience. It just works, or it doesn't.
+      <b>IT &amp; Systems</b><br>
+      <span>Linux kernel development. Networking.</span>
     </div>
 
     <div class="discipline">
-      <b>Finance &amp; Economics</b> <span>— the mechanism, not the narrative.</span><br>
-      Columbia, MS Applied Analytics: business analytics, corporate strategy, negotiation. BU, BA Economics: empirical, public, law, anti-trust, monetary &amp; banking. Econometrics and data analysis as the actual tools.
+      <b>Finance &amp; Economics</b><br>
+      <span>Columbia, MS Applied Analytics. Boston University, BA Economics. Econometrics, data analysis.</span>
     </div>
 
   </div>
 
   <h2 onclick="toggleSection(this)">Projects</h2>
   <div class="section-content">
-    <p><a href="https://kevinyuwenwang.github.io/flash-anzan">Flash Anzan</a> — Mental math trainer. Numbers flash, you add them. No chart patterns. Just the arithmetic.</p>
+    <p><a href="https://kevinyuwenwang.github.io/flash-anzan">Flash Anzan</a> — mental math trainer for rapid addition.</p>
   </div>
 
   <footer>
