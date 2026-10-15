@@ -8,8 +8,7 @@
     body { font-family: system-ui, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px; background: #111; color: #ccc; line-height: 1.75; font-size: 17px; }
     h1, h2 { color: #fff; font-weight: 400; }
     h1 { font-size: 2.4em; letter-spacing: -0.02em; margin: 0 0 8px; }
-    .tagline { font-style: italic; color: #666; font-size: .95em; margin-bottom: 6px; }
-    .subtitle { color: #999; margin-bottom: 50px; font-size: .95em; }
+    .tagline { font-style: italic; color: #666; font-size: .95em; margin-bottom: 50px; }
     h2 { font-size: 1.3em; margin-top: 42px; cursor: pointer; display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding-bottom: 5px; user-select: none; }
     h2::after { content: '[−]'; color: #4a9eff; font-size: .75em; font-family: monospace; }
     h2.collapsed::after { content: '[+]'; }
@@ -18,8 +17,12 @@
     p { margin: 0 0 16px; }
     a { color: #4a9eff; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    ul { margin: 0 0 10px; padding-left: 20px; }
+    ul { margin: 0 0 10px; padding-left: 20px; list-style: none; }
     li { margin-bottom: 7px; }
+    .discipline { margin-bottom: 28px; }
+    .discipline b { color: #eee; font-weight: 600; }
+    .discipline span { color: #999; }
+    .discipline em { color: #bbb; }
     footer { margin-top: 55px; padding-top: 20px; border-top: 1px solid #222; color: #555; font-size: .88em; line-height: 2.1; }
   </style>
 </head>
@@ -27,45 +30,58 @@
 
   <h1>Kevin Y. Wang</h1>
   <div class="tagline">The oak tree in the courtyard has watched 20 buildings rise and fall around it.</div>
-  <div class="subtitle">Builder of business and systems · New York</div>
+
+  <h2 onclick="toggleSection(this)">About</h2>
+  <div class="section-content">
+    <p>I build business and systems in New York. The through-line across everything I work on is finding the small, correct mechanism that moves a whole thing—whether it's a trading model, a control panel, or a team of two. I'm not the loudest in the room and I don't need to be. The work either holds or it doesn't, and I'd rather know which one it is before I show anyone.</p>
+    <p>This page is the short version. The longer one takes a while.</p>
+  </div>
 
   <h2 onclick="toggleSection(this)">The Story</h2>
   <div class="section-content">
-    <p>Growing up in Shanghai, I was the kid perpetually in the principal's office—half for disruption, half for whatever side hustle I was running. I was selling jailbroken iPhone apps to classmates and making more than most 13-year-olds earn in a year. At 15 my parents decided I needed a different zip code and shipped me to a small academy in the Denver suburbs.</p>
-    <p>Landing in a school where everyone had known each other since kindergarten, as a kid who'd learned English from textbooks, was its own kind of shock. First year I was mostly lost. Junior year I got it in my head that I could reshape myself through sustained effort, nothing more. Picked up basketball and soccer with no natural talent to speak of. Ran for hours after school, ate a steady diet of Jimmy John's, lost 30 kilograms in a year. That discipline bled into the classroom. I started actually listening, ran for student government treasurer, and found an interest in finance.</p>
-    <p>College is where I learned how fast money moves. At 18 I opened a brokerage account and went through the motions—dividends first, Macy's stock, just to feel like I was getting paid for holding. Then Bitcoin, because I got impatient. Then a month of YouTube gurus and hours spent hunting chart patterns that weren't there.</p>
-    <p>Then leverage. 10x, 20x. Felt effortless. Lasted until a random Tuesday whipsaw wiped the account. Got the margin call mid-trip, on a packed itinerary. Didn't go to the hotel. Slept in the car. A few months later I tried options. 100x leverage. Gone faster.</p>
-    <p>The cycle kept repeating until a junior-year afternoon when I picked up <em>Optimal Mean Reversion Trading</em>. The equations were a foreign language, but the signal was clear: this level of math is what separates a trader from a gambler. My foundation was too thin for what I was attempting, so I added a mathematics minor. My parents thought I'd lost my mind.</p>
-    <p>Graduate school made the career question unavoidable. Watching classmates grind for the same saturated finance internships, and knowing I'd always thought better alone than at a networking event, I started looking sideways. Then LLMs arrived and changed what was possible. Months of late-night conversations with AI, hundreds of hours bouncing around career paths and industry structure. Somewhere around the hundredth hour of that process, one thread kept surfacing: skilled trades.</p>
+
+    <p>Shanghai, middle school. I was the kid in the principal's office most Thursdays. Half the time for disruption. The other half for whatever side hustle I was running—by 13 I was selling jailbroken iPhone apps to classmates and making more than most people my age earned in a year. At 15 my parents decided I needed a different zip code. Denver suburbs. A small academy where nobody knew my name and I didn't know anyone's.</p>
+
+    <p>First year was mostly silence. I'd learned English from textbooks, and the social architecture of a school where everyone'd been in the same youth group since third grade was a language I simply didn't speak. Junior year I decided I could fix the gap with effort alone. No talent, no head start—just hours. Basketball, soccer, running after school until my legs gave out. A steady diet of Jimmy John's. Lost 30 kilos in a year. And the thing that actually changed wasn't the weight. It was that I'd proven to myself a boring, unsexy thing: sustained effort compounds, no matter what you start from. That belief got me into the classroom. Student government treasurer. An interest in finance I couldn't quite name yet.</p>
+
+    <p>College is where the interest got a name and a price tag. I opened a brokerage account at 18 and went through the phases: dividends first—Macy's stock, just to feel like I was getting paid for holding. Then Bitcoin, because I got impatient. Then a month of YouTube gurus and hours of staring at charts for patterns that weren't there. Then leverage. 10x, 20x. For a stretch it felt like the market was just handing me money. Then a Tuesday whipsaw wiped the whole account. I got the margin call mid-trip, on a packed itinerary. Didn't go to the hotel. Slept in the car. A few months later I tried options. 100x leverage. Gone faster than the rest.</p>
+
+    <p>I don't think I was stupid. I think I was optimizing for the wrong variable—chasing the next win instead of understanding the mechanism underneath. The distinction only became visible to me on a junior-year afternoon when I picked up <em>Optimal Mean Reversion Trading</em>. The equations were a foreign language. But the structure was clear: this tier of math is the line between a trader and a gambler, and I'd been gambling. My foundation was too thin for what I was attempting. So I added a mathematics minor halfway through. My parents thought I'd lost my mind.</p>
+
+    <p>Graduate school made the career question unavoidable. Watching classmates grind for the same three finance internships, and knowing I'd always thought better alone than at a networking event, I started looking sideways. Then LLMs arrived and the whole map shifted. Months of late-night conversations with AI, hundreds of hours bouncing around what I actually wanted to build. And one thread kept coming back: skilled trades. The physical, mechanical, problem-solving work that has a feedback loop you can touch. Either the panel works or it doesn't. Nobody can deck-ify that.</p>
+
+    <p>Looking back, the thread connecting all of this is less a philosophy and more a habit: I need to open the box and see the wiring before I'll trust it. The math minor wasn't about becoming a mathematician. It was about not getting fooled again by a narrative. The trades interest isn't romanticism. It's that the work is honest in a way that most of what I'd been doing wasn't. And the people I've actually respected in the workplace weren't the ones with the cleanest quarterly story. They were the ones who could sit in a long, quiet, unproductive stretch without reaching for a distraction. Something still gets built in that silence. Something never gets built in the noise.</p>
   </div>
 
-  <h2 onclick="toggleSection(this)">How I Think</h2>
+  <h2 onclick="toggleSection(this)">Disciplines</h2>
   <div class="section-content">
-    <p>The first and most important rule I hold myself to: don't lie to yourself. When something doesn't work, look at what actually happened. People who avoid that step end up operating on the physics of their own delusions. I lean heavily on disciplines that don't negotiate—math, physics, engineering—because thermodynamics and the law of large numbers don't care what narrative you want to maintain. Studying them is how I stay honest about where I actually stand inside a system.</p>
-    <p>That honesty has a practical payoff: I don't need the next external reward to keep going. Most people run on a cycle—hit the target, feel the high, revert to baseline, reach for the next target. I'd rather train the ability to sit in silence and boredom without reaching for a distraction. The treadmill and the path look similar from the outside. The difference is whether you stop when the reward stops.</p>
-    <p>On execution, I've stopped believing in the linear model. My trading years made it obvious: value is created in jumps. A hundred men can't push what one engine moves. A single correct framework outweighs years of incremental busyness. So I keep life as simple as I can—food, shelter, basic security handled efficiently—and protect the remaining mental space for the kind of thinking that actually compounds. No office politics, no performing for an audience.</p>
-    <p>And when I'm building with other people, I'm looking for the same grounding I demand of myself. I can usually tell a builder from a performer. The builder will have uglier short-term numbers because they're actually investing in something durable. The performer will have a clean quarterly narrative and nothing underneath. If a leader can't tell the difference, the system eats itself: good people leave unrecognized, bad ones climb. I'd rather work with a small group who care about the actual work than a large one that costs less and produces nothing.</p>
+
+    <div class="discipline">
+      <b>Mathematics</b> <span>— the core. Everything else is a dialect of this.</span><br>
+      <em>Enderton, Elements of Set Theory · Herstein, Topics in Algebra · Rudin, Principles of Mathematical Analysis</em><br>
+      Vector calculus, linear algebra, ODEs, probability, the BU coursework underneath.
+    </div>
+
+    <div class="discipline">
+      <b>Electrical Trades</b> <span>— the physical feedback loop.</span><br>
+      Apex Technical School, New York. Maxwell's equations, PLCs, networking. Not just the coursework—working in the field. The thing that either holds under load or it doesn't.
+    </div>
+
+    <div class="discipline">
+      <b>IT &amp; Systems</b> <span>— the infrastructure layer.</span><br>
+      Robert Love, <em>Linux Kernel Development</em>. Networking at the protocol level. A well-written kernel has no audience. It just works, or it doesn't.
+    </div>
+
+    <div class="discipline">
+      <b>Finance &amp; Economics</b> <span>— the mechanism, not the narrative.</span><br>
+      Columbia, MS Applied Analytics: business analytics, corporate strategy, negotiation. BU, BA Economics: empirical, public, law, anti-trust, monetary &amp; banking. Econometrics and data analysis as the actual tools.
+    </div>
+
   </div>
 
   <h2 onclick="toggleSection(this)">Projects</h2>
   <div class="section-content">
-    <ul>
-      <li><a href="https://kevinyuwenwang.github.io/flash-anzan">Flash Anzan</a> — Mental math trainer</li>
-    </ul>
-  </div>
-
-  <h2 onclick="toggleSection(this)">Background</h2>
-  <div class="section-content">
-    <ul>
-      <li><b>Electrical | Apex Technical School | New York, NY</b><br>Maxwell's Equations, PLCs, Networking</li>
-      <li><b>MS Applied Analytics | Columbia University | New York, NY</b><br>Business Analytics, Corporate Strategy, Negotiation</li>
-      <li><b>BA Economics, Minor in Mathematics | Boston University | Boston, MA</b><br>Econ: Empirical, Public, Law, Anti-trust, Monetary &amp; Banking<br>Math: Vector Calculus, Linear Algebra, ODEs, Probability</li>
-    </ul>
-    <ul>
-      <li>Enderton — <em>Elements of Set Theory</em></li>
-      <li>Herstein — <em>Topics in Algebra</em></li>
-      <li>Rudin — <em>Principles of Mathematical Analysis</em></li>
-    </ul>
+    <p><a href="https://kevinyuwenwang.github.io/flash-anzan">Flash Anzan</a> — Mental math trainer. Numbers flash, you add them. No chart patterns. Just the arithmetic.</p>
   </div>
 
   <footer>
