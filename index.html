@@ -1,119 +1,120 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    		<title>Kevin Y. Wang</title>
-		<style>
-			body {font-family: system-ui, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; background: #111; color: #ccc; line-height: 1.7; font-size: 18px;}
-			h1, h2, h3 {color: #fff; font-weight: normal; margin: 0 0 15px;}
-			h1 {font-size: 2.5em;}
-			h2 {font-size: 1.4em; margin-top: 35px; cursor: pointer; display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding-bottom: 5px; user-select: none;}
-			h2::after { content: '[−]'; color: #4a9eff; font-size: .8em; font-family: monospace; }
-			h2.collapsed::after { content: '[+]';}
-			h3 {font-size: 1.1em; color: #ddd; margin: 15px 0 5px 0; font-weight: normal; text-align: center;}
-			.section-content {overflow: hidden; transition: max-height .3s ease; max-height: 5000px; border-left: 1px solid #222; padding-left: 20px; margin-left: 5px;}
-			.section-content.collapsed {max-height: 0;}
-			a {color: #4a9eff; text-decoration: none;}
-			a:hover {text-decoration: underline;}
-			.quote {font-style: italic; color: #aaa; margin-bottom: 40px;}
-		</style>
-	</head>
-	
-	<body>
-		<h1>Kevin Y. Wang</h1>
-    		<div class="quote">The oak tree in the courtyard has watched 20 buildings rise and fall around it.</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Y. Wang</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 740px; margin: 60px auto; padding: 0 20px; background: #111; color: #ccc; line-height: 1.7; font-size: 17px; }
+    h1, h2, h3 { color: #fff; font-weight: 400; margin: 0 0 12px; }
+    h1 { font-size: 2.4em; letter-spacing: -0.02em; }
+    .tagline { font-style: italic; color: #777; margin-bottom: 45px; }
+    h2 { font-size: 1.35em; margin-top: 38px; cursor: pointer; display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding-bottom: 5px; user-select: none; }
+    h2::after { content: '[−]'; color: #4a9eff; font-size: .75em; font-family: monospace; }
+    h2.collapsed::after { content: '[+]'; }
+    h3 { font-size: 1.05em; color: #bbb; margin: 22px 0 4px; font-weight: 600; text-align: center; }
+    .section-content { overflow: hidden; transition: max-height .3s ease; max-height: 5000px; border-left: 1px solid #222; padding-left: 20px; margin-left: 5px; }
+    .section-content.collapsed { max-height: 0; }
+    p { margin: 0 0 14px; }
+    a { color: #4a9eff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { margin: 0 0 10px; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #222; color: #555; font-size: .9em; line-height: 2; }
+  </style>
+</head>
+<body>
 
-    		<h2 onclick="toggleSection(this)">About</h2>
-    		<div class="section-content">
-    		   	<p>I’m a builder of business and systems based in New York.</p>
-		</div>
+  <h1>Kevin Y. Wang</h1>
+  <div class="tagline">The oak tree in the courtyard has watched 20 buildings rise and fall around it.</div>
 
-    		<h2 onclick="toggleSection(this)">Early Years</h2>
-    		<div class="section-content">
-			<h3>Middle School</h3>
-    		   	<p>Growing up in Shanghai, I was a restless kid who couldn't sit still. I constantly got called to the principal's office for disrupting class or running side hustles. At one point, I was selling jailbroken iPhone apps to classmates and making far more money than a 13-year-old should. When I was 15, my parents decided I needed a change of scenery and shipped me off to a tiny academy in the Denver suburbs.</p>
-    		   	 
-    		   	<h3>High School</h3>
-    		   	<p>High school was like landing on a different planet. Picture an overweight Chinese kid who learned English from textbooks, suddenly dropped into a school where everyone had known each other since kindergarten and youth groups ran the social scene. I spent my first year confused and homesick. But junior year, something shifted. I wanted to prove I could reshape myself through sustained effort. I took up basketball and soccer despite having no natural talent. Between running for hours after school and eating tons of sauceless Jimmy John's sandwiches, I lost 30 kilograms in a year. That discipline bled into my academics. I started paying attention in class, ran for student government treasurer, and developed an interest in finance.</p>
-    		   	 
-    		   	<h3>College</h3>
-    		   	<p>College is where I discovered how fast money can be made—and lost. Rushing to open my first investment account at 18 sparked a rapid progression of discoveries. I started with dividends, buying Macy’s stock just to get paid for holding shares. Soon, I dumped those boring stocks for Bitcoin's speed. Growing impatient, I binged YouTube trading gurus and wasted entire days staring at price movements, hunting for chart patterns that didn’t exist.</p>
+  <h2 onclick="toggleSection(this)">About</h2>
+  <div class="section-content">
+    <p>Builder of business and systems. New York.</p>
+  </div>
 
-		   	<p>Then I discovered leverage. Trading at 10x and 20x felt like pulling money out of thin air. That thrill lasted until a minor market whipsaw wiped out my account on a random Tuesday. I received the margin call while traveling on a packed itinerary. I didn't even bother going to my hotel; I just slept in my car. A few months later, I thought options could win my money back. Not surprisingly, 100x leverage imploded even faster.</p>
+  <h2 onclick="toggleSection(this)">Early Years</h2>
+  <div class="section-content">
 
-		   	<p>The cycle repeated until an innocuous junior-year afternoon when I found a book called Optimal Mean Reversion Trading. The mathematical equations inside looked like alien hieroglyphics. But I had a gut feeling this was the secret sauce: understanding this level of math separated actual traders from gamblers. Knowing my foundation was too shaky for what I was trying to accomplish, I added a mathematics minor halfway through college. My parents thought I had lost my mind.</p>
-    		   	 
-    		   	<h3>Graduate School</h3>
-    		   	<p>Graduate school helped things click into place. Watching classmates compete for the same finance internships made me realize how saturated that path had become. As someone always more comfortable thinking through problems alone than networking at career fairs, the emergence of LLMs was a game-changer. I spent months in late-night conversations with AI, bouncing around ideas about career paths and industry trends. During one session—probably my hundredth hour of rambling about what to do with my life—skilled trades came up.</p>
-		</div>
+    <h3>Middle School</h3>
+    <p>Shanghai. Restless, chronically in the principal's office—either for disruption or for the side hustles I was running. At one point I was selling jailbroken iPhone apps to classmates and making more money than a 13-year-old should. At 15 my parents shipped me to a small academy in the Denver suburbs for a change of scenery.</p>
 
-		<h2 onclick="toggleSection(this)">Principles</h2>
-    		<div class="section-content">
-    		    <h3>Happiness is Internal</h3>
-		    <p>People build their lives around money, status, and experiences, only to wonder why satisfaction fades. You acquire the target, feel a brief high, and quickly revert to baseline—a trap psychologists call hedonic adaptation. When sadness or boredom creeps in, most people panic. They turn to external rewards and mindless activities to fill the void, which only creates artificial conflict and unnecessary friction in their lives.</p>
-		    
-		    <p>Watching this cycle convinced me the standard approach is broken. Instead of running, we have to train the ability to sit with silence, boredom, and sadness. We must face discomfort directly without substances or distractions. My foundational axiom is simple: happiness comes from within. Chasing external fixes just keeps you on a treadmill.</p>
-    		    
-    		    <h3>Ground in Objective Reality</h3>
-    		    <p>My absolute metric for judging whether a person is good or not comes down to one question: do they lie to themselves?</p>
+    <h3>High School</h3>
+    <p>An overweight Chinese kid who learned English from textbooks, dropped into a school where everyone had known each other since kindergarten. First year: confused, homesick. Junior year, something shifted. I wanted to prove I could reshape myself through sustained effort. Took up basketball and soccer with zero natural talent. Hours of running after school, a steady diet of Jimmy John's, and I lost 30 kilograms in a year. The discipline bled into academics. I started paying attention, ran for student government treasurer, and picked up an interest in finance.</p>
 
-    		    <p>People who lie to themselves operate on the laws of their own thoughts and delusions. They intentionally disregard objective reality. To avoid this, you have to know how the world actually works. This is why I prioritize studying mathematics, physics, and engineering. These disciplines teach the unbending laws of nature. Understanding concepts like thermodynamics, the conservation of energy, and the law of large numbers forces you to be strictly truthful. By aligning with these physical laws rather than fighting them, you discover your actual value inside complex systems and strip away the ability to lie to yourself.</p>
-    		    
-    		    <h3>Seek Asymmetric Value</h3>
-		    <p>My catastrophic early trading years taught me that wealth and value creation are explosive, not linear. It defies the standard corporate logic of exchanging a fixed amount of labor for a fixed wage. True value relies on asymmetric innovation; a hundred men cannot push what one engine moves.</p>
+    <h3>College</h3>
+    <p>At 18 I opened my first brokerage account and discovered how fast money gets made and lost. Started with dividends—Macy's stock, just to get paid for holding. Got bored, switched to Bitcoin. Then binged YouTube trading gurus, wasting entire days hunting chart patterns that didn't exist.</p>
+    <p>Then leverage. 10x, 20x—felt like printing money. Lasted until a whipsaw wiped the account on a random Tuesday. Margin call received mid-itinerary on a packed travel day. Skipped the hotel, slept in the car. A few months later I tried options. 100x leverage imploded faster.</p>
+    <p>The cycle repeated until a junior-year afternoon when I found <em>Optimal Mean Reversion Trading</em>. The equations looked like a foreign language, but the intuition was clear: this tier of math separated traders from gamblers. My foundation was too thin for what I was attempting, so I added a mathematics minor. My parents thought I'd lost my mind.</p>
 
-		    <p>Upgrading your mental frameworks yields insights orders of magnitude more valuable than raw labor. A single correct idea outweighs years of incremental busyness. To execute this, I strip life down to its raw components—meeting basic needs like food and shelter—and optimize them. By securing financial stability efficiently, I fiercely preserve my mental bandwidth for deep, compounding thought, totally free from exhausting office politics and the expectations of social signaling.</p>
+    <h3>Graduate School</h3>
+    <p>Watching classmates compete for the same saturated finance internships made me reconsider the default path. I've always thought better alone than at career fairs. The arrival of LLMs changed the calculus. Months of late-night conversations with AI—hundreds of hours of rambling about where to point my career—and one thread surfaced: skilled trades.</p>
+  </div>
 
-		    <h3>Talent Requires Judgment</h3>
-    		    <p>If creating value is the goal, people often ask, "Why not just hire smart employees to do the thinking?" Because talent only compounds under competent, truthful judgment.</p>
+  <h2 onclick="toggleSection(this)">Principles</h2>
+  <div class="section-content">
 
-    		    <p>An incompetent leader—one who lacks grounding in reality—cannot distinguish a visionary builder from a theatrical performer. The performer optimizes quarterly KPIs while quietly sacrificing long-term sustainability. The builder often posts worse short-term metrics because they are actually investing in research and development. If a leader rewards the performer, the system eats itself. Good workers leave from a lack of recognition, while bad ones thrive. A competent leader attracts intelligent people who will stay for the mission, even for less pay. True cognitive ability and accurate judgment are rare assets that money simply cannot buy.</p>
-    		</div>
-    		
-		<h2 onclick="toggleSection(this)">Projects</h2>
-  		<div class="section-content">
-  		  <ul>
-  		    <li><a href="https://woodland-horse-analytics.github.io/flash-anzan">Flash Anzan Mental Math Trainer</a> — Web app that flashes numbers for users to add mentally</li>
-  		    <li><a href="https://woodland-horse-analytics.github.io/binary-voting-machine">Binary Voting Machine</a> — Web app for groups to reach consensus on numerical decisions through voting</li>
-  		    <li><a href="https://woodland-horse-analytics.github.io/decision-tree-calculator">Decision Tree Calculator</a> — A visual tool for modeling decisions under uncertainty</li>
-  		  </ul>
-  		</div>
+    <h3>Happiness Is Internal</h3>
+    <p>Most people build lives around money, status, experiences, then wonder why satisfaction fades. You hit the target, feel the brief high, revert to baseline—hedonic adaptation. When boredom or sadness creeps in, the default response is to reach for another external reward, which only generates more friction.</p>
+    <p>The fix isn't a bigger reward. It's training the ability to sit with silence, boredom, and discomfort without reaching for a distraction. Happiness is generated internally. Chasing external fixes keeps you on a treadmill.</p>
 
-  		<h2 onclick="toggleSection(this)">Education</h2>
-  		<div class="section-content">
-  		  <ul>
-  		    <li><b>Electrical | Apex Technical School | New York, NY</b><br>Maxwell's Equations, Programmable Logic Controllers, Networking</li>
-  		    <li><b>MS in Applied Analytics | Columbia University | New York, NY</b><br>Business Analytics, Corporate Strategy, Negotiation</li>
-  		    <li><b>BA in Economics with Minor in Mathematics | Boston University | Boston, MA</b><br>Economics: Empirical, Public, Law, Anti-trust, Monetary &amp; Banking<br>Mathematics: Vector Calculus, Linear Algebra, Differential Equation, Probabilities</li>
-  		  </ul>
-  		</div>
+    <h3>Ground in Objective Reality</h3>
+    <p>My single test for whether a person is good: do they lie to themselves?</p>
+    <p>People who lie to themselves operate on the laws of their own delusions, selectively disregarding how the world actually works. The antidote is studying disciplines that don't negotiate: mathematics, physics, engineering. Thermodynamics, conservation of energy, the law of large numbers—these don't care what you want to be true. Aligning with them strips away the ability to self-deceive and reveals your actual position inside a system.</p>
 
-  		<h2 onclick="toggleSection(this)">Readings</h2>
-  		<div class="section-content">
-  		  <ul>
-  		    <li>Enderton: <em>Elements of Set Theory</em></li>
-  		    <li>Herstein: <em>Topics in Algebra</em></li>
-  		    <li>Rudin: <em>Principles of Mathematical Analysis</em></li>
-  		  </ul>
-		</div><br>
+    <h3>Seek Asymmetric Value</h3>
+    <p>My trading years taught me that wealth creation is explosive, not linear. It defies the corporate default of trading a fixed block of labor for a fixed wage. A hundred men cannot push what one engine moves.</p>
+    <p>A single correct mental framework outweighs years of incremental busyness. So I strip life to its components—food, shelter, basic security—optimize them efficiently, and preserve the remaining mental bandwidth for deep, compounding thought. Free from office politics and the labor of social signaling.</p>
 
-  		<footer>
-  		  <div>
-  		    <a href="https://github.com/kevinyuwenwang">GitHub</a> |
-  		    <a href="https://youtube.com/@kevinyuwenwang">YouTube</a> |
-  		    <a href="https://linkedin.com/in/kevinyuwenwang">LinkedIn</a> |
-		    <a href="https://x.com/kevinyuwenwang">X</a> |
-  		    <a href="https://www.facebook.com/kevinyuwenwang">Facebook</a> |
-  		    <a href="https://calendly.com/kevinyuwenwang/appointment">Calendly</a> |
-  		    <a href="mailto:kevin.yuwen.wang@gmail.com">Email</a>
-  		  </div>
-  		  <div>© 2026 Kevin Y. Wang</div>
-  		</footer>
+    <h3>Talent Requires Judgment</h3>
+    <p>"Why not just hire smart people to do the thinking?" Because talent only compounds under competent, truthful judgment.</p>
+    <p>A leader who lacks grounding in reality cannot tell a builder from a performer. The performer optimizes quarterly KPIs while quietly eroding long-term value. The builder posts worse short-term numbers because they're actually investing in R&D. If the leader rewards the performer, the system eats itself: good workers leave unrecognized, bad ones thrive. A leader with real judgment attracts people who stay for the mission, even for less pay. That kind of cognitive ability and calibration is rare. Money can't buy it.</p>
+  </div>
 
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {const sections = document.querySelectorAll('.section-content'); const headers = document.querySelectorAll('h2'); sections.forEach((section, index) => {section.classList.add('collapsed'); headers[index].classList.add('collapsed'); }); });
-			function toggleSection(header) {const content = header.nextElementSibling; content.classList.toggle('collapsed'); header.classList.toggle('collapsed');}
-  		</script>
-	</body>
+  <h2 onclick="toggleSection(this)">Projects</h2>
+  <div class="section-content">
+    <ul>
+      <li><a href="https://kevinyuwenwang.github.io/flash-anzan">Flash Anzan</a> — Mental math trainer</li>
+    </ul>
+  </div>
+
+  <h2 onclick="toggleSection(this)">Education</h2>
+  <div class="section-content">
+    <ul>
+      <li><b>Electrical | Apex Technical School | New York, NY</b><br>Maxwell's Equations, PLCs, Networking</li>
+      <li><b>MS Applied Analytics | Columbia University | New York, NY</b><br>Business Analytics, Corporate Strategy, Negotiation</li>
+      <li><b>BA Economics, Minor in Mathematics | Boston University | Boston, MA</b><br>Econ: Empirical, Public, Law, Anti-trust, Monetary &amp; Banking<br>Math: Vector Calculus, Linear Algebra, ODEs, Probability</li>
+    </ul>
+  </div>
+
+  <h2 onclick="toggleSection(this)">Readings</h2>
+  <div class="section-content">
+    <ul>
+      <li>Enderton — <em>Elements of Set Theory</em></li>
+      <li>Herstein — <em>Topics in Algebra</em></li>
+      <li>Rudin — <em>Principles of Mathematical Analysis</em></li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="https://github.com/kevinyuwenwang">GitHub</a> ·
+    <a href="https://youtube.com/@kevinyuwenwang">YouTube</a> ·
+    <a href="https://linkedin.com/in/kevinyuwenwang">LinkedIn</a> ·
+    <a href="https://x.com/kevinyuwenwang">X</a> ·
+    <a href="https://www.facebook.com/kevinyuwenwang">Facebook</a> ·
+    <a href="https://calendly.com/kevinyuwenwang/appointment">Calendly</a> ·
+    <a href="mailto:kevin.yuwen.wang@gmail.com">Email</a><br>
+    © 2026 Kevin Y. Wang
+  </footer>
+
+  <script>
+    document.querySelectorAll('.section-content').forEach(s => s.classList.add('collapsed'));
+    document.querySelectorAll('h2').forEach(h => h.classList.add('collapsed'));
+    function toggleSection(h) {
+      h.nextElementSibling.classList.toggle('collapsed');
+      h.classList.toggle('collapsed');
+    }
+  </script>
+</body>
 </html>
+
